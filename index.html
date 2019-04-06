@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Train Scheduler</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/js/moments.js"></script>
+        <!-- Firebase Reference -->
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+
+    </head>
+
+<body>
+  <div class="jumbotron">
+      <h1 style="text-align: center">Anytime is Train Time</h1>
+      <h3 style="text-align: center">Choo Choo Chee Chee</h3>
+     </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-primary">
+    <!-- Default panel contents -->
+        <div class="panel-heading">CURRENT TRAIN SCHEDULE</div>
+        <div class="panel-body">
+<!-- top panel for train schedule -->
+    <table class="table table-hover" id='TTable'>
+      <thead>
+              <tr>
+                <th>Train name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>Next arrival</th>
+                <th>Minutes away</th>
+              </tr>
+            </thead>
+            <tbody id="mainTBody">
+            </tbody>
+    </table>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- bottom panel for inputs / do i need to change to form? -->
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+          <h3 class="panel-title">ADD TRAIN</h3>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label for="emp-name">Train Name</label>
+              <input class="form-control" id="tName" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="emp-role">Destination</label>
+              <input class="form-control" id="destN" type="text">
+            </div>
+            <div class="form-group row">
+                <label for="emp-start">First train time (enter as military time hh:mm)</label>
+                <input class="form-control" id="firstTime" type="text">
+              </div>
+              <div class="form-group row">
+                  <label for="emp-monthly"> Frequency(minutes)</label>
+                  <input class="form-control" id="freq" type="text">
+                </div>
+            <button class="btn btn-primary" id="submit-add" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- Link to external Javascript -->
+    <script type="text/javascript" src="assets/js/choo.js"></script>
+
+</body>
+</html>
